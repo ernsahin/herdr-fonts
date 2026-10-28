@@ -59,7 +59,8 @@ class PickerSmoke(unittest.TestCase):
                             break
                 self.fail(output.decode(errors="replace")[-2000:])
             try:
-                until(lambda: b"HERDR FONTS" in output)
+                # PTY output can arrive in several chunks; wait for the complete first frame.
+                until(lambda: b"Esc close" in output)
                 self.assertNotIn(b"needs at least", output)
                 self.assertNotIn(b"macOS Terminal", output)
                 self.assertNotIn(b"Turkce", output)
