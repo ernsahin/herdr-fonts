@@ -16,3 +16,18 @@ python3 -m unittest discover -s tests -v
 ```
 
 Keep PRs focused. For larger changes, open an issue first so we can agree on the approach. Contributions are accepted under the project's MIT license.
+
+## Commits and pull requests
+
+Use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for commit subjects and PR titles:
+
+```text
+feat(kitty): add live font reload
+fix(terminal): preserve window dimensions
+docs: clarify the keyboard shortcut
+ci: test supported Python versions
+```
+
+Allowed types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, and `revert`. Scope is optional; add `!` before the colon for a breaking change.
+
+Open a branch and submit a PR to `main`. CI checks new commits, the PR title, Python 3.9/3.13 on Linux, and Python 3.13 on macOS. All required checks must pass and review conversations must be resolved before merging. PRs are squash-merged using the PR title as the final commit subject.
