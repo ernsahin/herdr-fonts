@@ -1,0 +1,26 @@
+id = "herdr.fonts"
+name = "herdr-fonts"
+version = "0.4.0"
+min_herdr_version = "0.9.5"
+description = "Pick installed monospace fonts, adjust size, and undo terminal font changes."
+platforms = ["macos", "linux"]
+
+[[panes]]
+id = "picker"
+title = "herdr-fonts"
+placement = "popup"
+width = 114
+height = 32
+command = ["python3", "herdr_fonts.py", "picker"]
+
+[[actions]]
+id = "open"
+title = "herdr-fonts: choose font and size"
+contexts = ["workspace"]
+command = ["python3", "herdr_fonts.py", "open"]
+
+[[actions]]
+id = "undo"
+title = "herdr-fonts: undo last font change"
+contexts = ["workspace"]
+command = ["python3", "herdr_fonts.py", "undo"]
