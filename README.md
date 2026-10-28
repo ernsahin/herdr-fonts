@@ -14,15 +14,11 @@ This uses [Herdr's plugin installer](https://herdr.dev/docs/plugins/). No build 
 
 ## Open
 
-With Herdr open, run this in one of its shell panes:
+### Keyboard shortcut
 
-```sh
-herdr plugin action invoke herdr.fonts.open
-```
+**Inside Herdr: press Control+B, release both keys, then press f.** On Linux, this is **Ctrl+B**, then **f**. This opens and reopens the font picker. Use **Escape** to close it.
 
-The picker opens as a popup in Herdr. Use the same command to reopen it after closing.
-
-For a keyboard shortcut, add this to `~/.config/herdr/config.toml`:
+Enable this shortcut once by adding the binding below to `~/.config/herdr/config.toml`. The GitHub plugin installer does not add keyboard bindings automatically.
 
 ```toml
 [[keys.command]]
@@ -32,7 +28,17 @@ command = "herdr.fonts.open"
 description = "Choose font and size"
 ```
 
-Reload Herdr's config with **Control+B**, release, then **Shift+R**. Open the picker with **Control+B**, release, then **f**. These use Herdr's default prefix; use your own prefix if you changed it. Control is not Command on macOS.
+After saving, press **Control+B**, release, then **Shift+R** to reload Herdr's config. These use Herdr's default prefix; use your own prefix if you changed it. On macOS, use **Control**, not Command. If `prefix+f` is already assigned, choose another key.
+
+### Without a shortcut
+
+With Herdr open, run this in one of its shell panes:
+
+```sh
+herdr plugin action invoke herdr.fonts.open
+```
+
+The picker opens as a popup in Herdr. Use the same command to reopen it after closing.
 
 ## Use
 
