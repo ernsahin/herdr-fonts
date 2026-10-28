@@ -30,4 +30,4 @@ ci: test supported Python versions
 
 Allowed types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, and `revert`. Scope is optional; add `!` before the colon for a breaking change.
 
-Open a branch and submit a PR to `main`. CI checks new commits, the PR title, Python 3.9/3.13 on Linux, and Python 3.13 on macOS. All required checks must pass and review conversations must be resolved before merging. PRs are squash-merged using the PR title as the final commit subject.
+Open a branch and submit a PR to `main`. CI checks new commits, the PR title, Python 3.9/3.13 on Linux, and Python 3.13 on macOS. All required checks must pass, review conversations must be resolved, and the repository owner (@ernsahin) must approve before merging. New commits dismiss previous approvals. PRs are squash-merged using the PR title as the final commit subject.
